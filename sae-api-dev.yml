@@ -1,0 +1,60 @@
+spring:
+  application:
+    name: sae-api
+  main:
+    banner-mode: off
+    allow-bean-definition-overriding: true
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        generate_statistics: true
+        format_sql: true
+        default_schema: SISTAE
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://host.docker.internal:5432/dbpgsqldev?currentSchema=sistae
+    username: user_sistae_app
+    password: user_sistae_app
+
+  flyway:
+    enabled: true
+    url: ${spring.datasource.url}
+    user: user_sistae
+    password: user_sistae
+    placeholders:
+      SCHEMA_NAME: SISTAE
+
+#LOGGER
+logging:
+  level:
+    org.springframework.web: INFO
+    org.hibernate: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type: TRACE
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.stat: DEBUG
+    br.com.poupex.sign.saeapi: DEBUG
+
+sae:
+  application:
+    name: sae-api
+    version: 1.0.0
+    file-path: ${java.io.tmpdir}
+  minio:
+    url: http://host.docker.internal:9000
+    bucketName: sae
+    accessKey: minio
+    secretKey: minio123
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+cors:
+  allowedOrigins: '*'
