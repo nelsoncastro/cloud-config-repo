@@ -1,0 +1,11 @@
+spring:
+  main:
+    banner-mode: off
+    allow-bean-definition-overriding: true
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: APP
