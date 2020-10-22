@@ -42,9 +42,9 @@ logging:
 
 sae:
   application:
-    name: @project.artifactId@
-    version: @project.version@
-    file-path: ${java.io.tmpdir}/${spring.application.name}.log
+    name: sae-api
+    version: 1.0.0
+    file-path: ${java.io.tmpdir}
   minio:
     url: http://host.docker.internal:9000
     bucketName: sae
