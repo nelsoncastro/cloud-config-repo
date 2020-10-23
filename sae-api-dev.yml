@@ -2,7 +2,7 @@ spring:
   application:
     name: sae-api
   main:
-    banner-mode: off
+    banner-mode: OFF
     allow-bean-definition-overriding: true
   jpa:
     database: POSTGRESQL
