@@ -1,6 +1,7 @@
-# Spring Clould Config Repository
-> This repository contains files related to spring clould config.
+# Spring Cloud Config Repository
+> This repository contains files related to spring cloud config.
 
+![spring-cloud](https://user-images.githubusercontent.com/4312368/97017037-d7977c80-1523-11eb-8af3-07c68c78a858.jpg)
 
 ## Meta
 
