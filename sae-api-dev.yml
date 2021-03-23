@@ -22,6 +22,9 @@ spring:
     password: user_sistae_app
 
   flyway:
+    ignore-missing-migrations: true
+    out-of-order: true
+    check-location: false  
     enabled: true
     url: ${spring.datasource.url}
     user: user_sistae
