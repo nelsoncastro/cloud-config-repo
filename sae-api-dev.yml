@@ -22,6 +22,7 @@ spring:
     password: user_sistae_app
 
   flyway:
+    table: FLYWAY_SCHEMA_HISTORY
     baseline-on-migrate: true
     ignore-missing-migrations: true
     out-of-order: true
